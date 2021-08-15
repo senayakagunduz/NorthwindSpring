@@ -26,11 +26,11 @@ public class ProductManager implements ProductService {
 	}
 
 
-	@Override
+	@Override  
 	public DataResult<List<Product>> getAll() {
 		// TODO Auto-generated method stub
 		return new SuccessDataResult<List<Product>>
-		(this.productDao.findAll(),"data listelendi");
+		(this.productDao.findAll(),"data listelendi  ");
 				
 	}
 

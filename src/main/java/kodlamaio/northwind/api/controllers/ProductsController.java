@@ -29,7 +29,7 @@ public class ProductsController {
 		this.productService = productService;
 	}
 	
-	@GetMapping("/getall") //getAll diye bir istek gelirse aşağıda metod çalışacak
+	@GetMapping("/getall")    //getAll diye bir istek gelirse aşağıda metod çalışacak
 	public DataResult<List<Product>> getAll(){ //ProductsController vasıtasıyla bu metod desteğini veriyoruz demektir.
 		return this.productService.getAll();
 		//(List<Product>) this.productService.getAll();

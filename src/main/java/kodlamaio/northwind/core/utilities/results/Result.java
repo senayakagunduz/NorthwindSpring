@@ -12,12 +12,17 @@ public class Result {
 		this(success);
 		this.message=message;
 	}
-    public boolean isScuccess() { //getter metodu aslında getsuccess ama onun yerine genellikle isSuccess kullanılıyormuş.
-    	return this.success;
-    }
-    public String getMessage() {
-    	return this.message;
-    }
-    
+	
+	  public boolean isScuccess() { 
+		  return this.success;
+	  }
+	  
+	  public String getMessage() { 
+		  
+		 return this.message;
+	  }
+	 
+
+
 
 }

@@ -24,11 +24,8 @@ public interface ProductDao extends JpaRepository <Product,Integer> {
 	@Query("From Product where productName=:productName and category_id=:categoryId")
 	List<Product> getByNameAndCategory(String productName, int categoryId);
 	
-	//@Query("Select new kodlamaio.northwind.entities.dtos.ProductWithCategoryDto(p.id,p.productName,c.categoryName) From Category c Inner Join c.products" )
-	//List<ProductWithCategoryDto> getProductWithCategoryDetails();
-	
 	@Query("Select new kodlamaio.northwind.entities.dtos.ProductWithCategoryDto"
-	  		+ "(p.id, p.productName, c.categoryName) "
-	  		+ "From Category c Inner Join c.products p")
+	  		+ "(p.id, p.productName, c.categoryName) "	
+	  		+ "From Category c Inner Join c.products p")	//c nin ilişkilendirilmiş productlarını çekiyoruz.
 	  List<ProductWithCategoryDto> getProductWithCategoryDetails();
 }
